@@ -5,14 +5,28 @@
 
     myApp.controller("FirstCtrl", ['$scope', function ($scope, data) {
         $scope.data = data;
+    
+        $scope.leaveVoicemail = function (number, message) {
+            alert('Number: ' + number + ' said: ' + message);
+        };
+
     }]);
 
 }());
 
-myApp.directive("superman", function() {
+myApp.directive("phone", function() {
     return {
         restrict: "E",
-        template: "<div>Here I am to save the day 2</div>"
+        scope: {
+            number: '@',
+            network: '=',
+            makeCall: '&'
+        },
+        templateUrl: 'phone.html',
+        link: function(scope) {
+            scope.networks = ["Vodafone", "Spark", "2Degrees"];
+            scope.network = scope.network[0];
+        }
     }
 });
 
