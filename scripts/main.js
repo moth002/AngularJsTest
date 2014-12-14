@@ -21,7 +21,11 @@ myApp.directive("superman", function () {
     }
 });
 
-myApp.directive("phone", function() {
+myApp.run(function($templateCache) {
+    $templateCache.put("phone.html", '<div>Number: {{number}}Network:<select ng-model="network" ng-options="net for net in networks"></select></div><input type="text" ng-model="value"><div class="button" ng-click="makeCall({message: value, number: number})">Call Home!</div>');
+});
+
+myApp.directive("phone", function () {
     return {
         restrict: "E",
         scope: {

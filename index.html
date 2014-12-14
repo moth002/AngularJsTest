@@ -17,30 +17,20 @@
         {{ev.pageX}}
     </div>
     <superman></superman>
-        <div ng-controller="FirstCtrl">
-            <input type="text" ng-model="data.message"/>
-            <h1>{{data.message}}</h1>
-            <div class="{{data.message}}">
-                Wrap me in a foundation component
-            </div>
-
-            <phone number="555-1234" network="network" make-call="leaveVoicemail(number, message)"></phone>
-            <phone number="867-5309" network="network" make-call="leaveVoicemail(number, message)"></phone>
-            <phone number="911" network="network" make-call="leaveVoicemail(number, message)"></phone>
+    <div ng-controller="FirstCtrl">
+        <input type="text" ng-model="data.message"/>
+        <h1>{{data.message}}</h1>
+        <div class="{{data.message}}">
+            Wrap me in a foundation component
         </div>
+
+        <phone number="555-1234" network="network" make-call="leaveVoicemail(number, message)"></phone>
+        <phone number="867-5309" network="network" make-call="leaveVoicemail(number, message)"></phone>
+        <phone number="911" network="network" make-call="leaveVoicemail(number, message)"></phone>
     </div>
+</div>
 
-<!--<div ng-app="myApp">
-        <div ng-controller="FirstCtrl">
-            <input type="text" ng-model="data.message"/>
-            <h1>{{data.message}}</h1>
-            <div class="{{data.message}}">
-                Wrap me in a foundation component
-            </div>
-        </div>
-    </div>-->
-
-    <!-- Cordova reference, this is added to your app when it's built. -->
+<!-- Cordova reference, this is added to your app when it's built. -->
     <script src="cordova.js"></script>
     <script src="scripts/platformOverrides.js"></script>
 
