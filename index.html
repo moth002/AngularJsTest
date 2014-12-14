@@ -10,8 +10,13 @@
     
 </head>
 <body>
-    <div ng-app="superhero">
-        <superman></superman>
+<div ng-app="superhero">
+
+    <div class="button" ng-repeat="item in 'How are you doing today?'.split(' ')" ng-click="ev = $event">
+        {{$index +1}}.{{item}}
+        {{ev.pageX}}
+    </div>
+    <superman></superman>
         <div ng-controller="FirstCtrl">
             <input type="text" ng-model="data.message"/>
             <h1>{{data.message}}</h1>
