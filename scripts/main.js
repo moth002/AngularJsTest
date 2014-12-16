@@ -1,18 +1,15 @@
 ﻿var myApp = angular.module("superhero", []);
 
-(function() {
-    'use strict';
 
-    myApp.controller("FirstCtrl", ['$scope', function ($scope, data) {
-        $scope.data = data;
+myApp.controller("FirstCtrl", ['$scope', function ($scope, data) {
+    $scope.data = data;
     
-        $scope.leaveVoicemail = function (number, message) {
-            alert('Number: ' + number + ' said: ' + message);
-        };
+    $scope.leaveVoicemail = function (number, message) {
+        alert('Number: ' + number + ' said: ' + message);
+    };
 
-    }]);
+}]);
 
-}());
 
 myApp.directive("superman", function () {
     return {
@@ -40,23 +37,3 @@ myApp.directive("phone", function () {
         }
     }
 });
-
-//myApp.factory('Data', function () {
-//    alert("factory");
-//    return { message: "panel" }
-//});
-
-//function FirstCtrl($scope, Data) {
-//    alert("factory");
-//    $scope.data = Data;
-//}
-
-//(function() {
-//    'use strict';
-
-//    angular.module("myApp").controller("FirstCtrl", ['$scope', 'Data', function ($scope) {
-//            alert("controller");
-//            $scope.data = "Getting location...";
-//        }]);
-
-//}());
